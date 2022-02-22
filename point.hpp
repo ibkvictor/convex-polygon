@@ -41,7 +41,7 @@ class Point{
 		
 };
 
-template <typename T, std::size_t SIZE, typename std::enable_if<std::is_arithmetic<T>::value>::type* = nullptr>
+template <typename T, typename std::enable_if<std::is_arithmetic<T>::value>::type* = nullptr>
 class PointArray{
 	private:
 		int size_;
