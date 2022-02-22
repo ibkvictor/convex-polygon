@@ -45,7 +45,7 @@ template <typename T, typename std::enable_if<std::is_arithmetic<T>::value>::typ
 class PointArray{
 	private:
 		int size_;
-		Point<T>* start;
+		const Point<T>* start;
 		void resize(int n){
                         Point<T>* temp = start;
                         start = new Point<T>[n];
@@ -69,7 +69,6 @@ class PointArray{
 		}
 		~PointArray(){
 			delete start;
-			delete size_;
 		}
 		void pushback(Point<T>& p){
 			resize(size_ + 1);
